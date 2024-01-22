@@ -15,7 +15,7 @@ state = "draft"
 [[technote.authors]]
 name.given = "Craig S."
 name.family = "Lage"
-orcid = ""
+orcid = "0000-0002-9601-345X"
 internal_id = "lagecs"
 [[technote.authors.affiliations]]
 name = "Physics Department"
