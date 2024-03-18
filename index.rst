@@ -86,6 +86,25 @@ Figure 5.  Hardpoint /TMA plots from two aggressive slews on two different night
 
 Figure 6.  Applied vs measured actuator forces for two aggressive slews on two different nights.
 
+All of the delay plots shown here were generated with the notebook at:
+https://github.com/lsst-sitcom/notebooks_vandv/blob/develop/notebooks/tel_and_site/subsys_req_ver/m1m3/SITCOMTN-083_fa_Error_lag_analysis.ipynb
+
+Movies of force actuator following errors
+=====================================================
+To better understand the deviations of the mesaured forces from the commanded forces, code was developed showing the force actuator following errors as a function of time and actuator position.  Two of these movies, one for a gentle slew and one for a more aggressive slew, are stored in the "movies" directory at the github location for this technote. (https://github.com/lsst-sitcom/sitcomtn-107). The notebook to make these movies is called SITCOMTN-107_Actuator_Following_Error_Movie_18Mar24.ipynb, and is in the "notebooks" directory at that same location.
+
+Figure 7 shows single frames of the movie of the more aggressive slews.  On the left, at a time when the hardpoint forces are exceeding the limit, it can be seen that the following errors are large.  On the right, when the hardpoint forces are within the limits, the following errors are much smaller.
+
+
+.. image:: ./_static/Movie_Large_HP_Forces.png
+   :width: 49%
+.. image:: ./_static/Movie_Small_HP_Forces.png
+   :width: 49%
+
+Figure 7.  Single frames of the movie of an aggressive slews (20240102 - 1308).  On the left, at a time when the hardpoint forces are exceeding the limit, it can be seen that the following errors are large.  On the right, when the hardpoint forces are within the limits, the following errors are much smaller.  The single dark actuator at the top was disabled at the time of this test.
+
+Also, note that  the actuators with large following errors are primarily around the edge, perhaps because the forces are larger there.  It is hoped that these movies will help us understand and fix what is causing the large discrepancies in the measured forces.
+
 Conclusions
 =====================================
 For aggressive slews, the measured forces do not track the applied forces well at all.  So it appears that the problem with large hardpoint forces for the aggressive slews is more serious than just time delays.  We need to understand why the measured forces are deviating so strongly from the intended forces.
